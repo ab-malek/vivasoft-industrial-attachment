@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Right Click File Structure</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="file-structure">
+    <ul class="folder">
+      <li>
+        <span class="folder-toggle"> > Root Folder</span>
+        <ul class="nested active">
+           <!-- New folders/files will appear here -->
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+
+  <div id="context-menu">
+    <ul>
+      <li onclick="contextAction('folder')"> New Folder</li>
+      <li onclick="contextAction('file')"> New File</li>
+    </ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
