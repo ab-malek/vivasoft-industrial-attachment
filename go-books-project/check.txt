@@ -1,0 +1,17 @@
+to create books :
+curl -X POST http://localhost:8080/books \
+  -H "Content-Type: application/json" \
+  -d '{"name":"Golang Basics", "author":"Malek", "description":"A book about Go."}'
+
+
+  to show all books
+  curl http://localhost:8080/books
+
+  update one book : 
+  curl -X PUT http://localhost:8080/books/1 \
+  -H "Content-Type: application/json" \
+  -d '{"name":"Golang Advanced", "author":"Malek", "description":"Updated description"}'
+
+
+// delete books
+curl -X DELETE http://localhost:8080/books/1
