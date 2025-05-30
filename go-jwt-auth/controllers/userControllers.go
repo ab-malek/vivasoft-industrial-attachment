@@ -105,9 +105,20 @@ func Login(c *gin.Context){
 		return
 	}
 
-	c.JSON(http.StatusOK, gin.H{
-		"Token" : tokenString,
-	})
+	c.SetSameSite(http.SameSiteDefaultMode)
+	c.SetCookie("Authorization", tokenString, 36000, "", "", false,true)
+
+	// c.JSON(http.StatusOK, gin.H{
+	// 	"Token" : tokenString,
+	// })
 
 	// send the token
+}
+
+func Validate(c *gin.Context){
+	user,_ := c.Get("user")
+
+	c.JSON(http.StatusOK, gin.H{
+		"User" : user,
+	})
 }
