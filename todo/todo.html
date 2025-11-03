@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="css/11-todo-list.css">
+</head>
+<body>
+
+    <p class="todo-title">Todo List</p>
+    <div class="todo-grid-input">
+        <input class="js-input-name name-input" placeholder="add todo list" onkeydown="
+            if(event.key == 'Enter'){
+                addTodo();
+            }
+        ">
+        <input type="date" class="js-input-date date-input">
+        <button onclick="
+            addTodo();
+        " class="add-button">Add</button>
+    </div>
+
+    <div class="js-todo-list"></div>
+ 
+    <script src="scripts/11-todo-list.js"></script>
+</body>
+</html>
